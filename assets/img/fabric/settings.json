@@ -1,0 +1,11 @@
+{
+  "ROOT_URL": "",
+  "MAIL_URL": "",
+  "reaction": {
+    "REACTION_USER": "soundarssr",
+    "REACTION_AUTH": "soundarssr",
+    "REACTION_EMAIL": "soundar.ssr@gmail.com"
+  },
+  "isDebug": "info",
+  "public": {}
+}

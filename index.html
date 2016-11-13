@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Design your Shirt</title>
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="fonts/font.css">
+
+	
+</head>
+<body class="responsive">
+  <div class="emerald page-emerald ">
+	<!-- init dataLayer for GTM -->
+	
+
+
+
+
+	<div id="modalWrapper" class="modalWrapper hide">
+		<div id="modalOverlay">&nbsp;</div>
+		<div class="modal">
+			<div class="modalCloser">
+				<img src="assets/img/closemodal.png" class="closeModal hide-on-mobile" alt="Close">
+				<img src="assets/img/closemodal-noshadow.png" class="closeModal hide-on-desktop hide-on-tablet" alt="Close">
+			</div>
+			<div id="modalContent" class="modalContent"></div>
+		</div>
+	</div>
+	
+
+								<div id="messages"></div>
+					
+
+
+<!--[if lte IE 9 ]>
+<script>
+	var lte_ie9 = true;
+	var clickEvent = 'click';
+</script>
+<![endif]-->
+
+
+<div id="viewport" class="viewport-fluid landscape extreme">
+	<div id="canvasses">
+		
+		<div id="canvas-zoom" class=" show " style="background-image: url(zoom.jpg);"></div>
+		<div id="canvas-back" class="canvas shirt-main show " style="background-image: url(back.jpg);"></div>
+		<div id="canvas-front" class="canvas shirt-main show" style="background-image: url(front.jpg);"></div>
+	</div>
+</div>
+
+<div id="ui" class="ui">
+	<div id="menus" class="menus"><div class="menuBar hide level1" id="menu_addons">
+	<ul style="transition-timing-function: cubic-bezier(0.1, 0.57, 0.1, 1); -webkit-transition-timing-function: cubic-bezier(0.1, 0.57, 0.1, 1); transition-duration: 0ms; -webkit-transition-duration: 0ms; transform: translate(0px, 0px) translateZ(0px);">
+
+	<li class="menuBackItem">
+		<span class="fa fa-arrow-down"></span>
+		<span class="fa fa-arrow-left"></span>
+		<span>Back</span>
+	</li><li class="menuItem " id="menuItem_handkerchief"><div class="contrastFabricMenuIcon menuIcon" id="menuIcon_handkerchief">
+	<img class="placementIcon full" alt="" src="assets/img/1.jpg">
+	<img class="fabricIcon hide" alt="">
+</div>
+		<span>Handkerchief</span>
+		<div class="mod"></div>
+	</li><li class="menuItem " id="menuItem_tiefix"><img class="menuIcon" id="menuIcon_tiefix" src="assets/img/addons.jpg">
+		<span>Tie-fix</span>
+		<div class="mod"></div>
+	</li></ul>
+<div class="prevnext prev hide-on-mobile hide"></div><div class="prevnext next hide-on-mobile hide"></div></div><div class="menuBar hide level1" id="menu_contrasts">
+	<ul style="transition-timing-function: cubic-bezier(0.1, 0.57, 0.1, 1); -webkit-transition-timing-function: cubic-bezier(0.1, 0.57, 0.1, 1); transition-duration: 0ms; -webkit-transition-duration: 0ms; transform: translate(0px, 0px) translateZ(0px);">
+
+	<li class="menuBackItem">
+		<span class="fa fa-arrow-down"></span>
+		<span class="fa fa-arrow-left"></span>
+		<span>Back</span>
+	</li><li class="menuItem " id="menuItem_collarContrast"><div class="contrastFabricMenuIcon menuIcon" id="menuIcon_collarContrast">
+	<img class="placementIcon full" alt="" src="assets/img/70.jpg">
+	<img class="fabricIcon hide" alt="">
+</div>
+		<span>Collar fabric</span>
+		<div class="mod"></div>
+	</li><li class="menuItem " id="menuItem_innerCollarContrast"><div class="contrastFabricMenuIcon menuIcon" id="menuIcon_innerCollarContrast">
+	<img class="placementIcon full" alt="" src="assets/img/63.jpg">
+	<img class="fabricIcon hide" alt="">
+</div>
+		<span>Inside collar</span>
+		<div class="mod"></div>
+	</li><li class="menuItem " id="menuItem_underCollarContrast"><div class="contrastFabricMenuIcon menuIcon" id="menuIcon_underCollarContrast">
+	<img class="placementIcon full" alt="" src="assets/img/208.jpg">
+	<img class="fabricIcon hide" alt="">
+</div>
+		<span>Under collar fabric</span>
+		<div class="mod"></div>
+	</li><li class="menuItem " id="menuItem_outerCuffContrast"><div class="contrastFabricMenuIcon menuIcon" id="menuIcon_outerCuffContrast">
+	<img class="placementIcon full" alt="" src="assets/img/207.jpg">
+	<img class="fabricIcon hide" alt="">
+</div>
+		<span>Cuff fabric</span>
+		<div class="mod"></div>
+	</li><li class="menuItem " id="menuItem_innerCuffContrast"><div class="contrastFabricMenuIcon menuIcon" id="menuIcon_innerCuffContrast">
+	<img class="placementIcon full" alt="" src="assets/img/64.jpg">
+	<img class="fabricIcon hide" alt="">
+</div>
+		<span>Inside cuff</span>
+		<div class="mod"></div>
+	</li><li class="menuItem disabled" id="menuItem_innerFasteningContrast"><div class="contrastFabricMenuIcon menuIcon" id="menuIcon_innerFasteningContrast">
+	<img class="placementIcon full" alt="" title="Contrasting fabric is not available for the current placket" src="assets/img/65.jpg">
+	<img class="fabricIcon hide" alt="">
+</div>
+		<span>Inside fastening</span>
+		<div class="mod"></div>
+	</li><li class="menuItem " id="menuItem_buttonPlacketContrast"><div class="contrastFabricMenuIcon menuIcon" id="menuIcon_buttonPlacketContrast">
+	<img class="placementIcon full" alt="" src="assets/img/85.jpg">
+	<img class="fabricIcon hide" alt="">
+</div>
+		<span>Button placket</span>
+		<div class="mod"></div>
+	</li><li class="menuItem disabled" id="menuItem_outerFasteningContrast"><div class="contrastFabricMenuIcon menuIcon" id="menuIcon_outerFasteningContrast">
+	<img class="placementIcon full" alt="" title="Contrasting fabric is not available for the current placket" src="assets/img/86.jpg">
+	<img class="fabricIcon hide" alt="">
+</div>
+		<span>Outside fastening</span>
+		<div class="mod"></div>
+	</li><li class="menuItem disabled" id="menuItem_fasteningSpin"><img class="menuIcon" id="menuIcon_fasteningSpin" title="Placket does not support fabric rotation" src="assets/img/disabled.png">
+		<span>Angled front placket</span>
+		<div class="mod"></div>
+	</li></ul>
+<div class="prevnext prev hide-on-mobile hide"></div><div class="prevnext next hide-on-mobile"></div></div><div class="menuBar hide level1" id="menu_pocket">
+	<ul style="transition-timing-function: cubic-bezier(0.1, 0.57, 0.1, 1); -webkit-transition-timing-function: cubic-bezier(0.1, 0.57, 0.1, 1); transition-duration: 0ms; -webkit-transition-duration: 0ms; transform: translate(0px, 0px) translateZ(0px);">
+
+	<li class="menuBackItem">
+		<span class="fa fa-arrow-down"></span>
+		<span class="fa fa-arrow-left"></span>
+		<span>Back</span>
+	</li><li class="menuItem " id="menuItem_pocketPlacement"><img class="menuIcon" id="menuIcon_pocketPlacement" src="assets/img/0.jpg">
+		<span>Placement</span>
+		<div class="mod"></div>
+	</li><li class="menuItem disabled" id="menuItem_pocketType"><img class="menuIcon" id="menuIcon_pocketType" title="Please select pocket placement first" src="assets/img/disabled.png">
+		<span>Style</span>
+		<div class="mod"></div>
+	</li><li class="menuItem disabled" id="menuItem_pocketLid"><img class="menuIcon" id="menuIcon_pocketLid" title="" src="assets/img/disabled.png">
+		<span>Pocket flap</span>
+		<div class="mod"></div>
+	</li></ul>
+<div class="prevnext prev hide-on-mobile hide"></div><div class="prevnext next hide-on-mobile hide"></div></div><div class="menuBar level0" id="menu_mainMenu">
+	<ul style="transition-timing-function: cubic-bezier(0.1, 0.57, 0.1, 1); -webkit-transition-timing-function: cubic-bezier(0.1, 0.57, 0.1, 1); transition-duration: 0ms; -webkit-transition-duration: 0ms; transform: translate(0px, 0px) translateZ(0px);">
+
+	<li class="menuItem modified" id="fit"><img class="menuIcon" id="menuIcon_fit" src="assets/img/fit/1.jpg">
+		<span>Fit</span>
+		<div class="mod"></div>
+	</li><li class="menuItem fabricChoice modified" id="fabric"><img class="menuIcon" id="menuIcon_fabric" src="assets/img/fabric/8.png">
+		<span>Fabric</span>
+		<div class="mod"></div>
+	</li><li class="menuItem modified" id="sleeve"><img class="menuIcon" id="menuIcon_sleeve" src="assets/img/sleeve/1.jpg">
+		<span>Sleeve</span>
+		<div class="mod"></div>
+	</li><li class="menuItem modified" id="collar"><img class="menuIcon" id="menuIcon_collar" src="assets/img/collar/1.jpg">
+		<span>Collar</span>
+		<div class="mod"></div>
+	</li><li class="menuItem disabled" id="cuff"><img class="menuIcon" id="menuIcon_cuff" title="Cuff requires long sleeve" src="assets/img/cuff/1.jpg">
+		<span>Cuff</span>
+		<div class="mod"></div>
+	</li><li class="divider"></li><li class="menuItem modified" id="placket"><img class="menuIcon" id="menuIcon_placket" src="assets/img/placket/1.jpg">
+		<span>Placket</span>
+		<div class="mod"></div>
+	</li><li class="menuItem " id="pocket"><img class="menuIcon" id="menuIcon_pocket" src="assets/img/pocket/1.jpg">
+		<span>Pocket</span>
+		<div class="mod"></div>
+	</li>
+	<li class="menuItem " id="backDetails"><img class="menuIcon" id="menuIcon_backDetails" src="assets/img/shoulder/1.jpg">
+		<span>Shoulder</span>
+		<div class="mod"></div>
+	</li>
+	<li class="menuItem " id="backDetails"><img class="menuIcon" id="menuIcon_backDetails" src="assets/img/back/1.jpg">
+		<span>Back details</span>
+		<div class="mod"></div>
+	</li>
+	<li class="menuItem " id="bottomCut"><img class="menuIcon" id="menuIcon_bottomCut" src="assets/img/bottom/1.jpg">
+		<span>Bottom cut</span>
+		<div class="mod"></div>
+	</li><li class="divider"></li><li class="menuItem " id="button"><img class="menuIcon" id="menuIcon_button" src="assets/img/button/1.png">
+		<span>Button</span>
+		<div class="mod"></div>
+	</li><li class="menuItem buttonThreadChoice " id="buttonThread"><img class="menuIcon" id="menuIcon_buttonThread" src="assets/img/buttont/1.jpg">
+		<span>Button thread</span>
+		<div class="mod"></div>
+	</li><li class="menuItem " id="contrasts"><img class="menuIcon" id="menuIcon_contrasts" src="assets/img/contrasts/1.jpg">
+		<span>Contrasts</span>
+		<div class="mod"></div>
+	</li>
+	<li class="menuItem " id="embroidery"><img class="menuIcon" id="menuIcon_embroidery" src="assets/img/emp/1.png">
+		<span>Embroidery</span>
+		<div class="mod"></div>
+	</li><li class="divider"></li><li class="menuItem " id="addons"><img class="menuIcon" id="menuIcon_addons" src="assets/img/addons/1.jpg">
+		<span>Add-ons</span>
+		<div class="mod"></div>
+	</li><li class="divider"></li><li class="menuItem cartButton">
+		<span></span>
+		<div class="mod"></div>
+	<span class="fa fa-shopping-cart"></span><span>Add to cart</span></li></ul>
+<div class="backToMenu">
+	<span>Back</span>
+</div><div class="prevnext prev hide-on-mobile hide"></div><div class="prevnext next hide-on-mobile"></div></div></div>
+	<div id="windows" style="touch-action: pan-x pan-y; -webkit-user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);" class=""><div class="spinner" role="progressbar" style="position: absolute; width: 0px; z-index: 2000000000; left: 50%; top: 50%;"><div style="position: absolute; top: -5px; -webkit-transform: translate3d(0px, 0px, 0px); opacity: 0.25; -webkit-animation: opacity-25-25-0-15 0.5s linear infinite; -webkit-animation-play-state: initial;"><div style="position: absolute; width: 39px; height: 10px; -webkit-box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px; -webkit-transform-origin: left 50% 0px; -webkit-transform: rotate(0deg) translate(43px, 0px); border-radius: 5px; background: rgb(85, 85, 85);"></div></div><div style="position: absolute; top: -5px; -webkit-transform: translate3d(0px, 0px, 0px); opacity: 0.25; -webkit-animation: opacity-25-25-1-15 0.5s linear infinite; -webkit-animation-play-state: initial;"><div style="position: absolute; width: 39px; height: 10px; -webkit-box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px; -webkit-transform-origin: left 50% 0px; -webkit-transform: rotate(24deg) translate(43px, 0px); border-radius: 5px; background: rgb(85, 85, 85);"></div></div><div style="position: absolute; top: -5px; -webkit-transform: translate3d(0px, 0px, 0px); opacity: 0.25; -webkit-animation: opacity-25-25-2-15 0.5s linear infinite; -webkit-animation-play-state: initial;"><div style="position: absolute; width: 39px; height: 10px; -webkit-box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px; -webkit-transform-origin: left 50% 0px; -webkit-transform: rotate(48deg) translate(43px, 0px); border-radius: 5px; background: rgb(85, 85, 85);"></div></div><div style="position: absolute; top: -5px; -webkit-transform: translate3d(0px, 0px, 0px); opacity: 0.25; -webkit-animation: opacity-25-25-3-15 0.5s linear infinite; -webkit-animation-play-state: initial;"><div style="position: absolute; width: 39px; height: 10px; -webkit-box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px; -webkit-transform-origin: left 50% 0px; -webkit-transform: rotate(72deg) translate(43px, 0px); border-radius: 5px; background: rgb(85, 85, 85);"></div></div><div style="position: absolute; top: -5px; -webkit-transform: translate3d(0px, 0px, 0px); opacity: 0.25; -webkit-animation: opacity-25-25-4-15 0.5s linear infinite; -webkit-animation-play-state: initial;"><div style="position: absolute; width: 39px; height: 10px; -webkit-box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px; -webkit-transform-origin: left 50% 0px; -webkit-transform: rotate(96deg) translate(43px, 0px); border-radius: 5px; background: rgb(85, 85, 85);"></div></div><div style="position: absolute; top: -5px; -webkit-transform: translate3d(0px, 0px, 0px); opacity: 0.25; -webkit-animation: opacity-25-25-5-15 0.5s linear infinite; -webkit-animation-play-state: initial;"><div style="position: absolute; width: 39px; height: 10px; -webkit-box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px; -webkit-transform-origin: left 50% 0px; -webkit-transform: rotate(120deg) translate(43px, 0px); border-radius: 5px; background: rgb(85, 85, 85);"></div></div><div style="position: absolute; top: -5px; -webkit-transform: translate3d(0px, 0px, 0px); opacity: 0.25; -webkit-animation: opacity-25-25-6-15 0.5s linear infinite; -webkit-animation-play-state: initial;"><div style="position: absolute; width: 39px; height: 10px; -webkit-box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px; -webkit-transform-origin: left 50% 0px; -webkit-transform: rotate(144deg) translate(43px, 0px); border-radius: 5px; background: rgb(85, 85, 85);"></div></div><div style="position: absolute; top: -5px; -webkit-transform: translate3d(0px, 0px, 0px); opacity: 0.25; -webkit-animation: opacity-25-25-7-15 0.5s linear infinite; -webkit-animation-play-state: initial;"><div style="position: absolute; width: 39px; height: 10px; -webkit-box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px; -webkit-transform-origin: left 50% 0px; -webkit-transform: rotate(168deg) translate(43px, 0px); border-radius: 5px; background: rgb(85, 85, 85);"></div></div><div style="position: absolute; top: -5px; -webkit-transform: translate3d(0px, 0px, 0px); opacity: 0.25; -webkit-animation: opacity-25-25-8-15 0.5s linear infinite; -webkit-animation-play-state: initial;"><div style="position: absolute; width: 39px; height: 10px; -webkit-box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px; -webkit-transform-origin: left 50% 0px; -webkit-transform: rotate(192deg) translate(43px, 0px); border-radius: 5px; background: rgb(85, 85, 85);"></div></div><div style="position: absolute; top: -5px; -webkit-transform: translate3d(0px, 0px, 0px); opacity: 0.25; -webkit-animation: opacity-25-25-9-15 0.5s linear infinite; -webkit-animation-play-state: initial;"><div style="position: absolute; width: 39px; height: 10px; -webkit-box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px; -webkit-transform-origin: left 50% 0px; -webkit-transform: rotate(216deg) translate(43px, 0px); border-radius: 5px; background: rgb(85, 85, 85);"></div></div><div style="position: absolute; top: -5px; -webkit-transform: translate3d(0px, 0px, 0px); opacity: 0.25; -webkit-animation: opacity-25-25-10-15 0.5s linear infinite; -webkit-animation-play-state: initial;"><div style="position: absolute; width: 39px; height: 10px; -webkit-box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px; -webkit-transform-origin: left 50% 0px; -webkit-transform: rotate(240deg) translate(43px, 0px); border-radius: 5px; background: rgb(85, 85, 85);"></div></div><div style="position: absolute; top: -5px; -webkit-transform: translate3d(0px, 0px, 0px); opacity: 0.25; -webkit-animation: opacity-25-25-11-15 0.5s linear infinite; -webkit-animation-play-state: initial;"><div style="position: absolute; width: 39px; height: 10px; -webkit-box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px; -webkit-transform-origin: left 50% 0px; -webkit-transform: rotate(264deg) translate(43px, 0px); border-radius: 5px; background: rgb(85, 85, 85);"></div></div><div style="position: absolute; top: -5px; -webkit-transform: translate3d(0px, 0px, 0px); opacity: 0.25; -webkit-animation: opacity-25-25-12-15 0.5s linear infinite; -webkit-animation-play-state: initial;"><div style="position: absolute; width: 39px; height: 10px; -webkit-box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px; -webkit-transform-origin: left 50% 0px; -webkit-transform: rotate(288deg) translate(43px, 0px); border-radius: 5px; background: rgb(85, 85, 85);"></div></div><div style="position: absolute; top: -5px; -webkit-transform: translate3d(0px, 0px, 0px); opacity: 0.25; -webkit-animation: opacity-25-25-13-15 0.5s linear infinite; -webkit-animation-play-state: initial;"><div style="position: absolute; width: 39px; height: 10px; -webkit-box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px; -webkit-transform-origin: left 50% 0px; -webkit-transform: rotate(312deg) translate(43px, 0px); border-radius: 5px; background: rgb(85, 85, 85);"></div></div><div style="position: absolute; top: -5px; -webkit-transform: translate3d(0px, 0px, 0px); opacity: 0.25; -webkit-animation: opacity-25-25-14-15 0.5s linear infinite; -webkit-animation-play-state: initial;"><div style="position: absolute; width: 39px; height: 10px; -webkit-box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px; -webkit-transform-origin: left 50% 0px; -webkit-transform: rotate(336deg) translate(43px, 0px); border-radius: 5px; background: rgb(85, 85, 85);"></div></div></div>
+		<!--<div class="betaSign"></div>-->
+		<div class="view-choice">
+	<div class="front-view">front</div>
+	<div class="back-view">back</div>
+	<div class="zoom-view">zoom</div>
+
+</div>
+		<div class="header-wrapper">
+			<div class="row">
+				<header>
+					<a href="#"><img class="logo" src="assets/favicon.ico" alt=""></a>
+					
+				</header>
+			</div>
+		</div>
+		 <div class="user-menu">
+						<div  class=""><a href="myAcc.html">
+							    <span class="fa fa-user"></span> 
+							<span class="hide-on-mobile">Log In</span></a>
+							</div>
+							<div id="topCart" class=""><a ><span >Cart </span>(<span id="topCartCount">1</span>)</a>
+							</div>
+				</div>   
+		<div class="priceBox">
+               
+              
+
+			<div id="finalPrice" class="price ">Rs.1095</div>
+			<a class="trustyButton addToCart m1t" id="addToCartButton">
+				<span class="fa fa-shopping-cart"></span>
+				<b class="text">Add to cart</b>
+			</a>
+			<div class="hide-on-mobile">
+				<a class="resetButton discreteButton mini m2t hide-on-mobile"><span class="fa fa-trash"></span><b class="text">Reset</b></a>
+			</div>
+			<div class="hide-on-desktop hide-on-tablet">
+				<a class="resetButton discreteButton m2t hide-on-desktop"><span class="fa fa-trash"></span></a>
+			</div>
+			<div class="hide-on-mobile">
+				<a href="https://www.surveymonkey.com/s/SJTPQHV" target="_blank" class="discreteButton mini m2t" id="feedbackButton"><b class="text">Feedback</b></a>
+			</div>
+			<div class="hide-on-desktop hide-on-tablet">
+				<a href="https://www.surveymonkey.com/s/SJTPQHV" target="_blank" class="discreteButton mini m4t" id="feedbackButton">Feedback</a>
+			</div>
+			<div class="hide">
+				<a class="discreteButton mini m4t" id="showLogBtn">Log</a>
+			</div>
+			
+					</div>
+		<div id="viewSwitcher">
+			<div id="zoom-in" class="">
+				<span class="fa fa-zoom-in"></span>
+			</div>
+			<div id="zoom-out" class="hide">
+				<span class="fa fa-zoom-out"></span>
+			</div>
+		</div>
+	</div>
+</div>
+ <div id="window_collar" class="window modified hide" >
+	<div class="titleBar">
+		<h1>Collar</h1>
+		<span class="resetLink">Set to default</span>
+			<span class="fa fa-close icon close" ></span>
+	</div>
+<div class="choiceList hasIscroll" id="input_collar"><ul style="transition-timing-function: cubic-bezier(0.1, 0.57, 0.1, 1); transition-duration: 0ms; transform: translate(0px, 0px) translateZ(0px);">
+    <li id="collar_1" class="choiceItem">
+		<div class="symbols"></div>
+		<img class="thumb" src="assets/img/collar/1.jpg" alt="">
+		<div class="mid">
+			<span>Business Classic</span>
+			
+		</div>
+		<div class="prices"><div class="price"></div></div>
+	</li><li id="collar_2" class="choiceItem">
+		<div class="symbols"></div>
+		<img class="thumb" src="assets/img/collar/2.jpg" alt="">
+		<div class="mid">
+			<span>Business superior</span>
+			
+		</div>
+		<div class="prices"><div class="price"></div></div>
+	</li><li id="collar_3" class="choiceItem active">
+		<div class="symbols"></div>
+		<img class="thumb" src="assets/img/collar/3.jpg" alt="">
+		<div class="mid">
+			<span>Cut-away Classic</span>
+			
+		</div>
+		<div class="prices"><div class="price"></div></div>
+	</li><li id="collar_4" class="choiceItem">
+		<div class="symbols"></div>
+		<img class="thumb" src="assets/img/collar/4.jpg" alt="">
+		<div class="mid">
+			<span>Cut-away Modern</span>
+			
+		</div>
+		<div class="prices"><div class="price"></div></div>
+	</li><li id="collar_5" class="choiceItem">
+		<div class="symbols"></div>
+		<img class="thumb" src="assets/img/collar/5.jpg" alt="">
+		<div class="mid">
+			<span>Cut-away superior</span>
+			
+		</div>
+		<div class="prices"><div class="price"></div></div>
+	</li><li id="collar_6" class="choiceItem">
+		<div class="symbols"></div>
+		<img class="thumb" src="assets/img/collar/6.jpg" alt="">
+		<div class="mid">
+			<span>Cut-away Extreme</span>
+			
+		</div>
+		<div class="prices"><div class="price"></div></div>
+	</li><li id="collar_7" class="choiceItem">
+		<div class="symbols"></div>
+		<img class="thumb" src="assets/img/collar/7.jpg" alt="">
+		<div class="mid">
+			<span>Cut-away Two button</span>
+			
+		</div>
+		<div class="prices"><div class="price"></div></div>
+	</li>
+</ul>
+</div>
+</div>
+
+<div id="window_fit" class="window modified hide" >
+	<div class="titleBar">
+		<h1>Fit</h1>
+		<span class="resetLink">Set to default</span>
+			<span class="fa fa-close icon close" ></span>
+	</div>
+<div class="choiceList hasIscroll" id="input_fit"><ul style="transition-timing-function: cubic-bezier(0.1, 0.57, 0.1, 1); transition-duration: 0ms; transform: translate(0px, 0px) translateZ(0px);">
+    <li id="fit_slim" class="choiceItem">
+		<div class="symbols"></div>
+		<img class="thumb" src="assets/img/fit/1.jpg" alt="">
+		<div class="mid">
+			<span>Slim Fit</span>
+			
+		</div>
+		<div class="prices"><div class="price"></div></div>
+	</li><li id="fit_regular" class="choiceItem">
+		<div class="symbols"></div>
+		<img class="thumb" src="assets/img/fit/2.jpg" alt="">
+		<div class="mid">
+			<span>Regular Fit</span>
+			
+		</div>
+		<div class="prices"><div class="price"></div></div>
+	</li><li id="fit_comfort" class="choiceItem active">
+		<div class="symbols"></div>
+		<img class="thumb" src="assets/img/fit/3.jpg" alt="">
+		<div class="mid">
+			<span>Comfort Fit</span>
+			
+		</div>
+		<div class="prices"><div class="price"></div></div>
+	</li>
+</ul>
+</div>
+</div>
+
+<div id="window_sleeve" class="window modified hide" >
+	<div class="titleBar">
+		<h1>Sleeve</h1>
+		<span class="resetLink">Set to default</span>
+			<span class="fa fa-close icon close" ></span>
+	</div>
+<div class="choiceList hasIscroll" id="input_sleeve"><ul style="transition-timing-function: cubic-bezier(0.1, 0.57, 0.1, 1); transition-duration: 0ms; transform: translate(0px, 0px) translateZ(0px);">
+    <li id="sleeve_full" class="choiceItem">
+		<div class="symbols"></div>
+		<img class="thumb" src="assets/img/sleeve/1.jpg" alt="">
+		<div class="mid">
+			<span>Full Sleeve</span>
+			
+		</div>
+		<div class="prices"><div class="price"></div></div>
+	</li><li id="sleeve_short" class="choiceItem">
+		<div class="symbols"></div>
+		<img class="thumb" src="assets/img/sleeve/2.jpg" alt="">
+		<div class="mid">
+			<span>Half Sleeve</span>
+			
+		</div>
+		<div class="prices"><div class="price"></div></div>
+	</li>
+</ul>
+</div>
+</div>
+
+<div id="window_cuff" class="window modified  hide" >
+	<div class="titleBar">
+		<h1>Cuff</h1>
+		<span class="resetLink">Set to default</span>
+			<span class="fa fa-close icon close" ></span>
+	</div>
+<div class="choiceList hasIscroll" id="input_cuff"><ul style="transition-timing-function: cubic-bezier(0.1, 0.57, 0.1, 1); transition-duration: 0ms; transform: translate(0px, 0px) translateZ(0px);">
+    <li id="cuff_anglecuff" class="choiceItem">
+		<div class="symbols"></div>
+		<img class="thumb" src="assets/img/cuff/1.jpg" alt="">
+		<div class="mid">
+			<span>Angle Cuff</span>
+			
+		</div>
+		<div class="prices"><div class="price"></div></div>
+	</li><li id="cuff_straightcuff" class="choiceItem">
+		<div class="symbols"></div>
+		<img class="thumb" src="assets/img/cuff/2.jpg" alt="">
+		<div class="mid">
+			<span>Straight cuff</span>
+			
+		</div>
+		<div class="prices"><div class="price"></div></div>
+	</li><li id="cuff_roundcuff" class="choiceItem active">
+		<div class="symbols"></div>
+		<img class="thumb" src="assets/img/cuff/3.jpg" alt="">
+		<div class="mid">
+			<span>Round Cuff</span>
+			
+		</div>
+		<div class="prices"><div class="price"></div></div>
+	</li>
+	
+</ul>
+</div>
+</div>
+
+
+
+
+<div id="window_fabric" class="window modified hide">
+	<div class="titleBar">
+		<h1>Fabric</h1>
+		<span class="resetLink">Set to default</span>
+					<span class="fa fa-close icon close" ></span>
+
+	</div>
+<div class="choiceList hasIscroll" id="input_fabric"><ul style="transition-timing-function: cubic-bezier(0.1, 0.57, 0.1, 1); transition-duration: 0ms; transform: translate(0px, 0px) translateZ(0px);">
+    <li id="fabric_101" class="choiceItem">
+		<div class="symbols"></div>
+		<img class="thumb" src="assets/img/fabric/1.png" alt="">
+		<div class="mid">
+			<span></span>
+			
+		</div>
+		<div class="prices">Rs.1099<div class="price"></div></div>
+	</li><li id="fabric_102" class="choiceItem">
+		<div class="symbols"></div>
+		<img class="thumb" src="assets/img/fabric/2.png" alt="">
+		<div class="mid">
+			<span>
+				
+			</span>
+			
+		</div>
+		<div class="prices">Rs.999<div class="price"></div></div>
+	</li><li id="fabric_103" class="choiceItem active">
+		<div class="symbols"></div>
+		<img class="thumb" src="assets/img/fabric/3.png" alt="">
+		<div class="mid">
+			<span></span>
+			
+		</div>
+		<div class="prices">Rs.899<div class="price"></div></div>
+	</li>
+	<li id="fabric_104" class="choiceItem active">
+		<div class="symbols"></div>
+		<img class="thumb" src="assets/img/fabric/4.png" alt="">
+		<div class="mid">
+			<span></span>
+			
+		</div>
+		<div class="prices">Rs.2099<div class="price"></div></div>
+	</li>
+	<li id="fabric_105" class="choiceItem active">
+		<div class="symbols"></div>
+		<img class="thumb" src="assets/img/fabric/5.png" alt="">
+		<div class="mid">
+			<span></span>
+			
+		</div>
+		<div class="prices">Rs.799<div class="price"></div></div>
+	</li>
+</ul>
+</div>
+</div>
+
+
+<div class="" id="choiceWindowTemplate">
+	<div class="titleBar">
+		<h1>Title</h1>
+		<span class="icon close fa fa-remove-sign"></span>
+	</div>
+</div>
+
+<div class="template" id="splashScreenTemplate">
+	<div class="splashScreen">
+		<h5></h5>
+		<p></p>
+		<p></p>
+	</div>
+</div>
+
+<div class="template" id="multiChoiceWindowTemplate">
+	<div class="titleBar">
+		<h1>Title</h1>
+		<span class="icon close fa fa-remove-sign"></span>
+	</div>
+	<div class="windowContent hasIscroll">
+		<ul></ul>
+	</div>
+</div>
+
+<div class="template collectionBar" id="quickCollectionTemplate">
+	<ul class="collection">
+
+	</ul>
+</div>
+
+<div class="template infoLink" id="infoLinkTemplate">
+	<span class="fa fa-info-sign"></span><a></a>
+</div>
+
+<ul class="template">
+	<li class="template" id="listItemTemplate">
+		<div class="symbols"></div>
+		<img class="thumb" src="" alt="">
+		<div class="mid">
+			<h2></h2>
+			<p></p>
+			
+		</div>
+		<div class="prices"></div>
+	</li>
+	<li class="template" id="menuItemTemplate">
+		<span></span>
+		<div class="mod"></div>
+	</li>
+	<li class="template" id="menuBackItemTemplate">
+		<span class="fa fa-arrow-down"></span>
+		<span class="fa fa-arrow-left"></span>
+		<span>Back</span>
+	</li>
+	<li class="template radioImageOption" id="radioImageOptionTemplate"><img src="" alt=""></li>
+	<li class="template selectInput" id="selectInputTemplate">
+		<h3></h3>
+		<select></select>
+	</li>
+	<li class="template textInput" id="textInputTemplate">
+		<h3></h3>
+		<p></p>
+		<form>
+			<input type="text">
+		</form>
+	</li>
+	<li class="template radioImageInput" id="radioImageInputTemplate">
+		<h3></h3>
+		<ul>
+
+		</ul>
+	</li>
+	<li class="template detailImage" id="detailImageTemplate">
+		<img src="" alt="">
+	</li>
+</ul>
+
+<div class="template" id="menuBarTemplate">
+	<ul>
+
+	</ul>
+</div>
+
+<div class="template nullChoice" id="nullChoiceTemplate">
+	<button class="infoButton"><span class="fa fa-remove-sign"></span></button>
+</div>
+
+<div class="template searchBar" id="searchBarTemplate">
+	<form>
+		<input type="text" placeholder="Search, e.g. blue striped oxford linen, etc.">
+		<button class="infoButton goSearch">Search</button>
+		<button class="disabledButton clearSearch">X</button>
+	</form>
+</div>
+
+<div class="template backToMenu" id="backToMenuTemplate">
+	<span>Back</span>
+</div>
+
+<div class="template ratings" id="ratingTemplate">
+	<div class="rating-wrapper">
+		<div class="rating"></div>
+	</div>
+	<span class="rating_votes"></span>
+</div>
+<div class="template contrastFabricMenuIcon" id="contrastFabricMenuIconTemplate">
+	<img class="placementIcon" alt="">
+	<img class="fabricIcon" alt="">
+</div>
+
+<div class="template detailImage" id="fixedDetailImageTemplate">
+	<img src="" alt="" class="img-responsive">
+</div>
+<div class="template detailText" id="detailTextTemplate">
+	<span></span>
+</div>
+<div class="template detailImage embroideryDetailImage" id="embroideryDetailImageTemplate">
+	<img src="" alt="" class="img-responsive">
+</div>
+
+<button class="template inverseButton mini" id="infoButtonTemplate">Info</button>
+
+<div class="template filterPane" id="filterPaneTemplate">
+	<button class="infoButton mini">Filter</button>
+</div>						
+	
+			<iframe src="assets/img/saved_resource.html" frameborder="0" scrolling="no" style="width:1px;height:1px;"></iframe>
+	
+	
+
+
+
+
+</div>
+ <script type="text/javascript" src="js/libs/jquery-2.1.3.min.js"></script>
+    <script type="text/javascript" src="js/home.js"></script>
+</body>
+</html>
